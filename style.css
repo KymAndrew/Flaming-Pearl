@@ -1,9 +1,9 @@
 /*!
-Theme Name: GeekPack
+Theme Name: 
 Theme URI: http://underscores.me/
-Author: WP Rockstar
-Author URI: https://www.geekpack.co
-Description: A starter framework for WP Rockstar
+Author: Kym Andrew
+Author URI: 
+Description: A starter framework for Flaming Pearl
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -694,15 +694,6 @@ a:hover, a:active {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -821,16 +812,8 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
+# Header
 --------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-	/* Make sure select elements fit in widgets. */
-}
-
-.widget select {
-	max-width: 100%;
-}
 
 /*--------------------------------------------------------------
 # Content
@@ -873,6 +856,21 @@ a:hover, a:active {
 	display: block;
 }
 
+/*--------------------------------------------------------------
+## Sidebar
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -982,4 +980,16 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
 }
