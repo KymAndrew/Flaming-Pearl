@@ -446,7 +446,15 @@ textarea {
 	line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+	clear: both;
+	font-family: 'Poppins';
+	font-weight: 200;
+}
+
+
+
+h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: 'Martel';
 }
@@ -972,6 +980,68 @@ a:hover, a:active {
 	max-width: 100%;
 }
 
+/*--------------------------------------------------------------
+# Front page
+--------------------------------------------------------------*/
+.home .main-content-section .inner {
+	padding: 70px 20px;
+}
+.widget-title {
+	text-align: center;
+}
+
+#front-page-2 {
+	clear: both;
+}
+
+#front-page-2 .widget {
+	width: 50%;
+	float: left;
+}
+
+#front-page-2 .widget-title {
+border-bottom: 1px solid;
+margin-top: 0;
+text-align: left;
+}
+
+#front-page-2 #custom_html-3 {
+	padding-right: 20px;
+}
+
+#front-page-2 #custom_html-4 {
+	padding-right: 20px;
+}
+
+#front-page-2 .about-heading {
+	font-size: 20px;
+	font-family: 'Matelo';
+	margin: 20px 0;
+}
+
+#front-page-2 .about-paragraph {
+	margin: 20px 0;
+}
+
+#front-page-3 {
+	background: #4F6370;
+	clear: both;
+	color: #fff;
+}
+
+#front-page-3 .inner {
+	padding: 70px 20px 40px;
+} 
+
+.portfolio h1 {
+	text-align: center;	
+}
+
+.portfolio {
+	background:#C4D4C8;
+	background-size: cover;
+	background-position: center;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

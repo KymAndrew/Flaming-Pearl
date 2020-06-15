@@ -8,28 +8,44 @@
  * @package geekpack
  */
 
-get_header();
+get_header( 'widgets');
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+		<div id="front-page-1" class="widget-area">
+			<div class="wrap">
+				<div class="inner"><?php dynamic_sidebar( 'front-page-1' ); ?></div>
 
-			get_template_part( 'template-parts/content', 'page' );
+			</div>
+		</div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		<section class="portfolio">
+			<div class="wrap">
+				<div class="inner">
+					<h1>portfolio</h1>
 
-		endwhile; // End of the loop.
-		?>
+				</div>
+			</div>
+		</section>
+
+		<div id="front-page-2" class="widget-area">
+			<div class="wrap">
+				<div class="inner"><?php dynamic_sidebar( 'front-page-2' ); ?></div>
+				
+			</div>
+		</div>
+
+		<div id="front-page-3" class="widget-area">
+			<div class="wrap">
+				<div class="inner"><?php dynamic_sidebar( 'front-page-3' ); ?></div>
+				
+			</div>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php 
-get_footer();
+get_footer( 'widgets' );

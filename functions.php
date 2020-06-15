@@ -104,7 +104,11 @@ add_action( 'after_setup_theme', 'geekpack_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function geekpack_widgets_init() {
-	register_sidebar( array(
+	
+}
+add_action( 'widgets_init', 'geekpack_widgets_init' );
+
+register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'geekpack' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'geekpack' ),
@@ -113,10 +117,36 @@ function geekpack_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-}
-add_action( 'widgets_init', 'geekpack_widgets_init' );
 
-/**
+register_sidebar( array(
+		'name'          => esc_html__( 'Front Page 1', 'geekpack' ),
+		'id'            => 'front-page-1',
+		'description'   => esc_html__( 'Add widgets here.', 'geekpack' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+register_sidebar( array(
+		'name'          => esc_html__( 'Front Page 2', 'geekpack' ),
+		'id'            => 'front-page-2',
+		'description'   => esc_html__( 'Add widgets here.', 'geekpack' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );register_sidebar( array(
+		'name'          => esc_html__( 'Front Page 3', 'geekpack' ),
+		'id'            => 'front-page-3',
+		'description'   => esc_html__( 'Add widgets here.', 'geekpack' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+	/**
  * Enqueue scripts and styles.
  */
 function geekpack_scripts() {
