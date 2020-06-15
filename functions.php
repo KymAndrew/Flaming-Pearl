@@ -159,3 +159,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function add_google_fonts() {
+	
+wp_enqueue_style( 'google_web_font_poppins', "https://fonts.googleapis.com/css2?family=Poppins" );
+
+wp_enqueue_style( 'google_web_font_alegreya_sans', "https://fonts.googleapis.com/css2?family=Alegreya Sans" );
+
+wp_enqueue_style( 'google_web_font_martel', "https://fonts.googleapis.com/css2?family=Martel" );
+}
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+
+
+
+
+

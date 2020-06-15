@@ -405,6 +405,13 @@ template {
 	background: bisque;
 }
 
+.home .header-section {
+	background: url(http://flaming-pearl.local/wp-content/uploads/2020/06/IMG_1927.png);
+	height: 100vh;
+	background-size: cover;
+	background-position: center top;
+}
+
 #primary {
 	float: left;
 	width: 65%;
@@ -417,6 +424,12 @@ template {
 	width: 35%;
 	padding: 30px 0 0 20px;
 }
+
+.page #primary,
+.home #primary {
+	width: 100%;
+	padding-right: 0;
+}
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -427,7 +440,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Alegreya Sans';
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -435,10 +448,12 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: 'Martel';
 }
 
 p {
 	margin-bottom: 1.5em;
+	
 }
 
 dfn, cite, em, i {
@@ -638,6 +653,23 @@ textarea {
 	width: 100%;
 }
 
+.button {
+	background: #57c1ca;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 4px;
+    font-size: 20px;
+    border: 1px solid #fff;
+}
+
+.button:hover {
+	background: #fff;
+	color: #57c1ca;
+	border: 2px solid #57c1ca;
+}
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -645,15 +677,28 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #0f043a;
+	text-transform: uppercase;
 }
 
-a:visited {
+/*a:visited {
 	color: purple;
-}
+}*/
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #4B71B7;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover {
+	color:#4B71B7;
+	transition: all 0.3s ease;
+	border-bottom: 1px solid;
+}
+
+.current_page_item a {
+	color:#4B71B7;
+	border-bottom: 1px solid;
 }
 
 a:focus {
@@ -668,10 +713,11 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
+	clear: none;
 	display: block;
 	float: left;
-	width: 100%;
+	width: 85%;
+	margin-top: 1%;
 }
 
 .main-navigation ul {
@@ -712,6 +758,7 @@ a:hover, a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+	padding-left: 20px;
 }
 
 .main-navigation a {
@@ -745,6 +792,10 @@ a:hover, a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.menu-primary-container {
+	float: right;
 }
 
 /*--------------------------------------------------------------
@@ -845,7 +896,29 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+ .site-branding {
+ 	width: 15%;
+ 	float: left;
+ }
 
+ .hero {
+    text-align: center;
+    width: 50%;
+    margin: 6% auto;
+}
+
+.hero-heading {
+	text-transform: uppercase;
+    line-height: 44px;
+    margin-bottom: 0;
+    font-size: 44px;
+}
+
+.hero-paragraph {
+    font-weight: 100;
+    margin-top: 4px;
+    font-size: 24px;
+}
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1016,6 +1089,12 @@ object {
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
+@media screen and (min-height: 700px) {
+	.hero {
+		margin: 10% auto;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.menu-toggle {
 		display: none;
