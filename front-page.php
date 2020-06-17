@@ -21,10 +21,10 @@ get_header( 'widgets');
 			</div>
 		</div>
 
-		<section class="portfolio">
+		<section class="work">
 			<div class="wrap">
 				<div class="inner">
-					<h1>portfolio</h1>
+					<h1>work</h1>
 
 				</div>
 			</div>
