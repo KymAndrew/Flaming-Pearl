@@ -687,6 +687,7 @@ textarea {
 a {
 	color: #0f043a;
 	text-transform: uppercase;
+	text-decoration: none;
 }
 
 /*a:visited {
@@ -698,15 +699,21 @@ a:hover, a:focus, a:active {
 	transition: all 0.3s ease;
 }
 
-.menu a:hover {
+.header-section .menu a:hover {
 	color:#4B71B7;
 	transition: all 0.3s ease;
 	border-bottom: 1px solid;
 }
 
-.current_page_item a {
+.header-section .current_page_item a {
 	color:#4B71B7;
 	border-bottom: 1px solid;
+}
+
+.header-section #menu-item-48.current_page_item a {
+	color:#4B71B7;
+	border-bottom: none;
+	padding-bottom: 0;
 }
 
 a:focus {
@@ -804,6 +811,10 @@ a:hover, a:active {
 
 .menu-primary-container {
 	float: right;
+}
+
+.menu li {
+	padding-left: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -1043,8 +1054,135 @@ text-align: left;
 	background-position: center;
 }
 /*--------------------------------------------------------------
+# Below header
+--------------------------------------------------------------*/
+
+#below-header {
+	background: url(http://flaming-pearl.local/wp-content/uploads/2020/06/IMG_2822.png);
+	background-size: cover;
+    background-position: center;
+    height: 180px;
+}
+
+/*--------------------------------------------------------------
+# Above footer and contact form
+--------------------------------------------------------------*/
+
+#above-footer {
+	background: #708999;
+	clear: both;
+	color: #fff;
+}
+
+#above-footer h1 {
+	margin-bottom: 40px;
+}
+
+#above-footer .widget,
+#front-page-3 .widget {
+	padding: 20px 0;
+}
+
+#nf-field-1-container,
+#nf-field-2-container {
+	width: 50%;
+    float: left;
+    clear: none;
+}
+
+#nf-field-1-container {
+	padding-right: 20px;
+}
+
+#nf-field-2-container {
+	padding-left: 20px;
+}
+
+.nf-form-fields-required {
+	display: none;
+}
+
+.nf-error-msg,
+.ninja-forms-req-symbol {
+	color: #414042 !important;
+}
+
+.nf-error .ninja-forms-field {
+    border: 1px solid #fff !important;
+}
+
+.nf-field-element textarea {
+	height: 50px !important;
+}
+
+.nf-field-label label {
+	font-weight: 100 !important;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: 'oswald';
+}
+
+.nf-field-element input,
+.nf-field-element textarea {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+}
+
+#nf-field-4 {
+	background: #fff;
+	color: #57c1ca;
+	border-radius: 0;
+    text-decoration: none;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 4px;
+    font-size: 16px;
+    border: 2px solid #fff;
+}
+
+#nf-field-4:hover {
+	background: #57c1ca;
+	color: #fff;
+	border: 2px solid #fff;
+}
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
+#footer {
+	padding-top: 30px;
+}
+
+.footer-section .widget {
+	clear: both;
+	text-align: center;
+}
+<!--
+.footer-logo {
+}-->
+
+.footer-section .menu-primary-container {
+	float: none;
+}
+
+.footer-section .menu {
+	display: inline-flex;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-section ul {
+	list-style: none;
+}
+
+.copyright {
+	font-family: 'Alegreya Sans';
+	font-size: 14px;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

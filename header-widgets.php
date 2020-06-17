@@ -61,7 +61,7 @@
 				<div class="hero">
 					<h1 class=" hero-heading">digital design and<br>content management</h1>
 					<p class="hero-paragraph">for artists</p>
-					<a class="button" href="#">Learn More</a>
+					<a class="button" href="/services">Learn More</a>
 					<div></div>
 				</div>
 			<?php else : ?>
