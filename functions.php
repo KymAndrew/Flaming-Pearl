@@ -232,7 +232,21 @@ wp_enqueue_style( 'google_web_font_martel', "https://fonts.googleapis.com/css2?f
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 
+function create_custom_post_types() {
+	register_post_type('portfolio',
+		array(
+			'labels' => array (
+				'name' => __( 'Portfolio' ),
+				'singular_name' => __( 'Portfolio Single') 
+				),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' =>array( 'slug' => 'portfolio' ),
+		)
 
+	);
+}
+add_action( 'init', 'create_custom_post_types' );
 
 
 
