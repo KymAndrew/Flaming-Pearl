@@ -15,7 +15,7 @@
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
@@ -53,7 +53,14 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php geekpack_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<?php if (is_single () ) : ?>
+	
+		<footer class="entry-footer">
+			<?php geekpack_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+
+	<?php else : ?>
+	<<?php endif; ?>
+
+
 </article><!-- #post-<?php the_ID(); ?> -->
